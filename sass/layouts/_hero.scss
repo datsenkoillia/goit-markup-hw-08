@@ -1,0 +1,69 @@
+.hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: #2f303a;
+  background-image: var(--hero-gradient), url(../images/hero_bg_mob.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  background-size: cover;
+  @include retina {
+    background-image: var(--hero-gradient), url(../images/hero_bg_mob_2x.jpg);
+  }
+
+  @include mobile {
+    background-image: var(--hero-gradient), url(../images/hero_bg_tab.jpg);
+    @include retina {
+      background-image: var(--hero-gradient), url(../images/hero_bg_tab_2x.jpg);
+    }
+  }
+
+  @include tablet {
+    background-image: var(--hero-gradient), url(../images/hero_bg.jpg);
+    @include retina {
+      background-image: var(--hero-gradient), url(../images/hero_bg_2x.jpg);
+    }
+  }
+  @include desktop {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+.hero__title {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+.hero__order-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: var(--color-selection);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+  display: block;
+  margin: 0 auto;
+  transition: background-color var(--transition-duration-main) var(--transitiom-timing-effect-main);
+  &:hover,
+  &:focus {
+    background-color: #0076d6;
+  }
+}

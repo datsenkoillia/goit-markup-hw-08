@@ -1,0 +1,209 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--transition-duration-main) var(--transitiom-timing-effect-main),
+    visibility var(--transition-duration-main) var(--transitiom-timing-effect-main);
+}
+
+.modal-window {
+  position: absolute;
+  width: calc(100% - 30px);
+  min-height: 609px;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition-duration-main) var(--transitiom-timing-effect-main);
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  @include mobile {
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+  }
+}
+
+.close-modal-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #000000;
+  transition: fill var(--transition-duration-main) var(--transitiom-timing-effect-main);
+  &:hover,
+  &:focus {
+    fill: var(--color-selection);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+
+  @include desktop {
+    line-height: 1.15;
+  }
+}
+
+.input-field {
+  margin-bottom: 10px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--color-secondary);
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.modal-input {
+  display: block;
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border var(--transition-duration-main) var(--transitiom-timing-effect-main);
+  &:focus,
+  &:hover {
+    border: 1px solid var(--color-selection);
+  }
+}
+
+.modal-comment {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #000000;
+  transition: border var(--transition-duration-main) var(--transitiom-timing-effect-main);
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill var(--transition-duration-main) var(--transitiom-timing-effect-main);
+  .modal-input:focus + &,
+  .modal-input:hover + & {
+    fill: var(--color-selection);
+  }
+}
+
+.comment-field {
+  margin-bottom: 20px;
+}
+
+.agreement-check {
+  margin-bottom: 30px;
+}
+
+.agreement-text {
+  display: flex;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--color-secondary);
+  align-items: center;
+
+  @include desktop {
+    padding-left: 12px;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.agreement-link {
+  display: block;
+  color: var(--color-selection);
+  margin-left: 5px;
+}
+
+.agreement-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--color-primary);
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition: border var(--transition-duration-main) var(--transitiom-timing-effect-main);
+  .agreement:checked + & {
+    background-color: var(--color-selection);
+    border: 2px solid var(--color-selection);
+    fill: #ffffff;
+  }
+  .agreement:focus + & {
+    border: 2px solid var(--color-selection);
+  }
+}
+
+.modal-send-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 52px;
+  display: block;
+  margin: 0 auto;
+  transition: background-color var(--transition-duration-main) var(--transitiom-timing-effect-main);
+  &:hover,
+  &:focus {
+    background-color: #0076d6;
+  }
+}

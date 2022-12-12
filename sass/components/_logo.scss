@@ -1,0 +1,36 @@
+.logo {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+.logo--blue {
+  color: #2196f3;
+}
+
+.logo--black {
+  color: #000000;
+}
+
+.logo--white {
+  color: #ffffff;
+}
+
+
+.footer-contacts__logo {
+  text-align: center;
+  margin-bottom: 28px;
+  
+  @include desktop {
+    text-align: left;
+  }
+}

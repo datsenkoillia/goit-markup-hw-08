@@ -1,0 +1,31 @@
+.do-we-do {
+  display: none;
+
+  @include desktop {
+    display: block;
+    padding-top: 0;
+  }
+}
+
+.do-we-do__list {
+  display: flex;
+  gap: 30px;
+}
+
+.do-we-do__item {
+  position: relative;
+}
+
+.do-we-do__description {
+  width: 100%;
+  position: absolute;
+  transform: translateY(-100%);
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
