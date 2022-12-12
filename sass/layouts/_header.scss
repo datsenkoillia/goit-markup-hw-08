@@ -90,6 +90,23 @@
   fill: currentColor;
 }
 
+.header__mail-icon {
+  @include desktop {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.header__tel-icon {
+  @include desktop {
+    width: 10px;
+    height: 16px;
+  }
+}
+
+
+
+
 .mob-container {
   width: 100%;
   height: 100%;

@@ -553,6 +553,20 @@ body {
   fill: currentColor;
 }
 
+@media screen and (min-width: 1200px) {
+  .header__mail-icon {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__tel-icon {
+    width: 10px;
+    height: 16px;
+  }
+}
+
 .mob-container {
   width: 100%;
   height: 100%;
